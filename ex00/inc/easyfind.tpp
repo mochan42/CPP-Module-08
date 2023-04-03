@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 15:55:00 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/03 17:41:55 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/03 18:50:12 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "easyfind.hpp"
 #include <algorithm>
+#include <vector>
+#include <list>
 
 //======== CONSTRUCTORS =========================================================================
 template <typename T>
@@ -95,9 +97,19 @@ void	Easyfind<T>::printElements(void)
 
 //======== FUNCTIONS ===========================================================================
 template < typename T >
-bool	easyfind(T container, int target)
+unsigned long	easyfind(T container, int target)
 {
-	return (container == target);
+	unsigned long	index;
+	
+	index = 0;
+	typename T::const_iterator	it;
+	typename T::const_iterator	ite = container.end();
+	for (it =  container.begin(); it != ite; it++)
+	{
+		std::cout << *it << "\n";
+	}
+	(void)target;
+	return (index);
 }
 
 
