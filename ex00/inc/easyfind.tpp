@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 15:55:00 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 11:54:38 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 12:37:32 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,13 @@
 #include <vector>
 #include <list>
 
-//======== FUNCTIONS ===========================================================================
+//======== FUNCTIONS ================================================================
 template < typename T >
 long	easyfind(T container, int target)
 {
-	long	index;
-	
-	index = 0;
-	typename T::const_iterator	it;
-	typename T::const_iterator	ite = container.end();
-	for (it =  container.begin(); it != ite; it++)
-	{
-		if (*it == target)
-			break;
-		index++;
-	}
-	if (index != static_cast<long>(container.size()))
-		return (index);
+	typename T::iterator it = std::find(container.begin(), container.end(), target);
+	if (it != container.end())
+		return std::distance(container.begin(), it);
 	else
 		throw TargetNotFound();
 }
