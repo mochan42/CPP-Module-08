@@ -6,13 +6,15 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:41:25 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 18:40:10 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 19:23:28 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
 #define SPAN_HPP
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 #include "Span.h"
 
@@ -21,7 +23,7 @@ class Span
 	public:
 		// CONSTRUCTOR
 		Span();
-		Span(int N);
+		Span(unsigned int N);
 		Span(const Span& src);
 		
 		// DESTRUCTOR
@@ -29,13 +31,13 @@ class Span
 
 		// OVERLOAD OPERATOR
 		Span&	operator=(const Span& src);
-		int&	operator[](int index);
 		
 		// GETTER - SETTER
 		int	getN(void);
 
 		// MEMBER FUNCTIONS
 		void	printArrayElements(void);
+		void	addNumber(int setNumberValue);
 
 		class OutOfRangeException : public std::exception
 		{
@@ -48,8 +50,9 @@ class Span
 
 	private:
 		// MEMBER ATTRIBUTES
-		int		_N; // number of elements in the Span
-		int*	_array;
+		unsigned int		_N; // max number of elements in the Span
+		std::vector<int>	_collection;
+		
 };
 
 

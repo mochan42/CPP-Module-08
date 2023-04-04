@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:40:00 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 18:41:28 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 19:25:00 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int main()
 {
-	Span	span1(3);
-	span1[0] = 42;
-	span1[1] = 21;
-	span1[2] = 97;
+	Span	span1(10);
+	span1.addNumber(42);
+	span1.addNumber(21);
 	span1.printArrayElements();
-
 	return 0;
 }
