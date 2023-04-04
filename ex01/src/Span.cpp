@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:40:07 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 19:34:05 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 20:23:24 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ void	Span::addNumber(int setNumberValue)
 		this->_collection.push_back(setNumberValue);
 }
 
-
 void	Span::printArrayElements(void)
 {
 	if (_N == 0)
@@ -88,3 +87,36 @@ void	Span::printArrayElements(void)
 	}
 }
 
+int	Span::shortestSpan(void)
+{
+	int shortest_span;
+
+	std::sort(this->_collection.begin(), this->_collection.end()); // sort the vector in ascending order
+	std::vector<int> diffs(this->_collection.size() - 1);
+	std::adjacent_difference(this->_collection.begin(), this->_collection.end(), diffs.begin()); // calculate the adjacent differences
+	shortest_span = *std::min_element(diffs.begin(), diffs.end()); // find the minimum difference
+	return (shortest_span);
+}
+
+int	Span::longestSpan(void)
+{
+	int largest = *std::max_element(this->_collection.begin(), this->_collection.end());
+	int smallest = *std::min_element(this->_collection.begin(), this->_collection.end());
+	return (largest - smallest);
+}
+
+void	Span::betterAddNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+	while (begin < end)
+	{
+		try
+		{
+			this->addNumber(*begin);
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+		begin++;
+	}
+}

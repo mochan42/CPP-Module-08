@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:41:25 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 19:42:20 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 20:22:58 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <numeric>
 
 #include "Span.h"
 
@@ -38,6 +39,9 @@ class Span
 		// MEMBER FUNCTIONS
 		void	printArrayElements(void);
 		void	addNumber(int setNumberValue);
+		void	betterAddNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+		int		shortestSpan(void);
+		int		longestSpan(void);
 
 		class CollectionAlreadyFullException : public std::exception
 		{
