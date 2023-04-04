@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 15:55:00 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 12:37:32 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 16:58:11 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	printElements(T container)
 	typename T::const_iterator it;
 	typename T::const_iterator ite = container.end();
 
-	for (it = container.begin(); it != ite; it++)
+	for (it = container.begin(); it != container.end(); it++)
 	{
 		std::cout << *it;
 		if (std::distance(it, ite) > 1)
