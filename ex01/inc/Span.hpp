@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:41:25 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 19:23:28 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 19:42:20 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ class Span
 		void	printArrayElements(void);
 		void	addNumber(int setNumberValue);
 
-		class OutOfRangeException : public std::exception
+		class CollectionAlreadyFullException : public std::exception
 		{
 			public:
 				virtual const char* what() const throw()
 				{
-					return ("Index is out of range!");
+					return ("\033[0;31mThe collection is already full, cannot add more numbers!");
 				}
 		};
 

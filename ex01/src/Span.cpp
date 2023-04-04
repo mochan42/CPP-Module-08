@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:40:07 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 19:24:42 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 19:34:05 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,18 @@ Span::~Span()
 //======== GETTER / SETTER ======================================================================
 int	Span::getN(void)
 {
-	return (_N);
+	return (this->_N);
+
 }
 
 
 //======== MEMBER FUNCTIONS =====================================================================
 void	Span::addNumber(int setNumberValue)
 {
-	_collection.push_back(setNumberValue);
+	if (this->_collection.size() >= this->_N)
+		throw (Span::CollectionAlreadyFullException());
+	else
+		this->_collection.push_back(setNumberValue);
 }
 
 
@@ -75,10 +79,10 @@ void	Span::printArrayElements(void)
 	{
 		for (unsigned int i = 0; i < _collection.size(); i++)
 		{
-			if (i != _collection.size() - 1)
-				std::cout << _collection[i] << " / ";
+			if (i != this->_collection.size() - 1)
+				std::cout << this->_collection[i] << " / ";
 			else
-				std::cout << _collection[i] << "\n";
+				std::cout << this->_collection[i] << "\n";
 		}
 		
 	}
