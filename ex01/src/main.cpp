@@ -6,14 +6,19 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:40:00 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 12:44:03 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/04 18:41:28 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Span.tpp"
+#include "Span.hpp"
 
 int main()
 {
-	std::cout << "Hello\n";
+	Span	span1(3);
+	span1[0] = 42;
+	span1[1] = 21;
+	span1[2] = 97;
+	span1.printArrayElements();
+
 	return 0;
 }
