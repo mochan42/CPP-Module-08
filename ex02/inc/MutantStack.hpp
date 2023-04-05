@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 23:19:17 by moninechan        #+#    #+#             */
-/*   Updated: 2023/04/05 22:35:33 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/05 22:43:19 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ class MutantStack : public std::stack< T > //MutantStack will also inherit (impl
 		reverse_iterator rend();
 		const_reverse_iterator rbegin() const;
 		const_reverse_iterator rend() const;
-		
 
 	private:
 
