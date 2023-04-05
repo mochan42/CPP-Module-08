@@ -6,7 +6,7 @@
 /*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 23:33:09 by moninechan        #+#    #+#             */
-/*   Updated: 2023/04/05 20:13:45 by mochan           ###   ########.fr       */
+/*   Updated: 2023/04/05 22:23:41 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ MutantStack<T>::MutantStack(const MutantStack& src) : std::stack<T>(src)
 
 
 //======== OVERLOAD OPERATORS ===================================================================
+// This is a shallow copy
 template<typename T>
 MutantStack<T>&  MutantStack<T>::operator=(const MutantStack& src)
 {
