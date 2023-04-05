@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
+/*   By: mochan <mochan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 23:19:12 by moninechan        #+#    #+#             */
-/*   Updated: 2023/04/04 23:32:27 by moninechan       ###   ########.fr       */
+/*   Updated: 2023/04/05 19:33:31 by mochan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,5 @@
 # define CY "\033[0;36m"
 # define WH "\033[0;37m"
 # define D "\033[0m"
-
-
 
 #endif
