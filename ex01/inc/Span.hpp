@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+	/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
@@ -13,6 +13,7 @@
 #ifndef SPAN_HPP
 #define SPAN_HPP
 #include <iostream>
+#include <cstdlib> // for srand() and rand()
 #include <algorithm>
 #include <vector>
 #include <numeric>

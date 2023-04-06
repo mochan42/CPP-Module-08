@@ -6,7 +6,7 @@
 /*   By: moninechan <moninechan@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 12:40:00 by mochan            #+#    #+#             */
-/*   Updated: 2023/04/04 23:05:46 by moninechan       ###   ########.fr       */
+/*   Updated: 2023/04/06 09:40:03 by moninechan       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int main()
 		try
 		{
 			bigSpan.betterAddNumber(bigVector.begin(),bigVector.end());
-			bigSpan.printArrayElements();
+			// bigSpan.printArrayElements();
 		}
 		catch(const std::exception& e)
 		{
